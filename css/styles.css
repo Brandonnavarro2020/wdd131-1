@@ -1,0 +1,84 @@
+:root{
+  --bg:#f5f7fb;
+  --accent:#0b6b5f;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --max-width:1100px;
+  --gap:1.25rem;
+  --radius:8px;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,var(--accent),#0e7f6c);
+  color:#fff;
+  padding:.75rem 0;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.site-title{margin:0;font-size:1.25rem}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600}
+
+/* Hero */
+.hero{position:relative;overflow:hidden}
+.hero-img{width:100%;height:auto;display:block;object-fit:cover}
+.hero-caption{
+  position:absolute;left:1rem;bottom:1.25rem;background:rgba(0,0,0,0.45);
+  color:#fff;padding:.75rem 1rem;border-radius:6px;backdrop-filter:blur(4px);
+}
+
+/* Layout grid */
+.grid{display:grid;grid-template-columns:1fr 320px;gap:var(--gap);align-items:start;margin-top:1.25rem}
+.main-card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.weather-card{
+  background:linear-gradient(180deg,#fff, #f7fffb);padding:1rem;border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,6,23,0.06);position:relative;
+}
+
+/* Weather heading pseudo-element emoticon in large view */
+.weather-heading{
+  margin:0 0 .5rem 0;display:flex;align-items:center;gap:.5rem;font-size:1.1rem;
+}
+@media (min-width:900px){
+  .weather-heading::after{
+    content:" ☁️";
+    font-size:1.1rem;
+    margin-left:.25rem;
+    display:inline-block;
+  }
+}
+
+/* Mobile-specific icon placement using pseudo-element for mobile view hidden on wide */
+.weather-mobile-icon{display:none;margin-bottom:.75rem}
+.weather-data{list-style:none;padding:0;margin:0}
+.weather-data li{margin-bottom:.5rem;color:var(--muted)}
+
+/* Footer */
+.site-footer{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;font-size:.95rem;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr; }
+  .weather-mobile-icon{display:block}
+  .weather-heading::after{content:"";} /* remove emoticon on small */
+  .hero-caption{left:0;right:0;margin:0 auto;max-width:90%}
+}

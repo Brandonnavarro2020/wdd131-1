@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi Lugar - Country Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Mi Lugar</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Atracciones</a></li>
+          <li><a href="#">Cultura</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero con srcset / picture -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width:1200px)" type="image/webp">
+        <source srcset="images/hero-medium.webp" media="(min-width:640px)" type="image/webp">
+        <img src="images/hero-small.webp" alt="Panorámica del lugar" class="hero-img" width="1600" height="700">
+      </picture>
+      <div class="hero-caption container">
+        <h2>Bienvenido a Mi Lugar</h2>
+        <p>Un breve texto descriptivo que conecta con el diseño y colores del sitio.</p>
+      </div>
+    </section>
+
+    <section class="content container grid">
+      <article class="main-card">
+        <h3>Descripción</h3>
+        <p>Texto sobre el lugar: historia, por qué visitarlo y datos relevantes.</p>
+      </article>
+
+      <aside class="weather-card">
+        <h3 class="weather-heading">Weather</h3>
+        <div class="weather-body">
+          <div class="weather-mobile-icon">
+            <img src="images/weather-mobile.svg" alt="Clima" width="48" height="48">
+          </div>
+          <ul class="weather-data">
+            <li>Temperature: <span id="temp">8</span>°C</li>
+            <li>Wind Speed: <span id="wind">20</span> km/h</li>
+            <li>Wind Chill: <span id="windchill">N/A</span></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; <span id="year"></span> Mi Lugar</p>
+    <p>Última modificación: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

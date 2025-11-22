@@ -1,54 +1,57 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mi Lugar - Country Page</title>
+  <title>Madrid, Cundinamarca — Country Page</title>
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/main.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="site-title">Mi Lugar</h1>
-      <nav class="main-nav">
+      <h1 class="site-title">Madrid, Cundinamarca</h1>
+      <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Atracciones</a></li>
-          <li><a href="#">Cultura</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Attractions</a></li>
+          <li><a href="#">Economy</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero con srcset / picture -->
-    <section class="hero">
+    <!-- Hero with picture srcset -->
+    <section class="hero" aria-label="Hero image of Madrid">
       <picture>
         <source srcset="images/hero-large.webp" media="(min-width:1200px)" type="image/webp">
         <source srcset="images/hero-medium.webp" media="(min-width:640px)" type="image/webp">
-        <img src="images/hero-small.webp" alt="Panorámica del lugar" class="hero-img" width="1600" height="700">
+        <img src="images/hero-small.webp" alt="Panoramic view of Madrid, Cundinamarca" class="hero-img" width="1600" height="700">
       </picture>
       <div class="hero-caption container">
-        <h2>Bienvenido a Mi Lugar</h2>
-        <p>Un breve texto descriptivo que conecta con el diseño y colores del sitio.</p>
+        <h2>Welcome to Madrid</h2>
+        <p>A commuter town near Bogotá with a strong flower production industry and growing urban life.</p>
       </div>
     </section>
 
-    <section class="content container grid">
-      <article class="main-card">
-        <h3>Descripción</h3>
-        <p>Texto sobre el lugar: historia, por qué visitarlo y datos relevantes.</p>
+    <section class="content container grid" aria-label="Main content">
+      <article class="main-card" aria-labelledby="about-heading">
+        <h3 id="about-heading">About Madrid</h3>
+        <p><strong>Location and elevation:</strong> Madrid is located in the Cundinamarca department on the Bogotá savanna at approximately 2,554 meters (8,379 ft) above sea level and within the Western Savanna Province.</p>
+        <p><strong>Population and growth:</strong> Recent estimates place the municipality population around 140,000 residents; it is one of the fast-growing and most populous municipalities near Bogotá within the metropolitan area.</p>
+        <p><strong>History:</strong> The settlement dates to the colonial period (founded in the 16th century) and later became an organized municipality; its modern development is tied to regional transport links and suburban expansion.</p>
+        <p><strong>Economy:</strong> Madrid is well known for flower production, especially roses exported internationally; the municipality also hosts manufacturing, logistics and retail facilities that serve the Bogotá region.</p>
       </article>
 
-      <aside class="weather-card">
-        <h3 class="weather-heading">Weather</h3>
+      <aside class="weather-card" aria-labelledby="weather-heading">
+        <h3 id="weather-heading" class="weather-heading">Weather</h3>
         <div class="weather-body">
           <div class="weather-mobile-icon">
-            <img src="images/weather-mobile.svg" alt="Clima" width="48" height="48">
+            <img src="images/weather-mobile.svg" alt="Weather icon" width="48" height="48">
           </div>
-          <ul class="weather-data">
+          <ul class="weather-data" aria-live="polite">
             <li>Temperature: <span id="temp">8</span>°C</li>
             <li>Wind Speed: <span id="wind">20</span> km/h</li>
             <li>Wind Chill: <span id="windchill">N/A</span></li>
@@ -56,11 +59,20 @@
         </div>
       </aside>
     </section>
+
+    <section class="facts container">
+      <h3>Quick facts</h3>
+      <ul>
+        <li><strong>Distance to Bogotá:</strong> ~21 km west of Bogotá, integrated to the metropolitan area.</li>
+        <li><strong>Area:</strong> Approx. 120.5 km² (municipality) with urban and rural zones.</li>
+        <li><strong>Main industries:</strong> floriculture (roses), logistics, manufacturing and services.</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer container">
-    <p>&copy; <span id="year"></span> Mi Lugar</p>
-    <p>Última modificación: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Madrid, Cundinamarca</p>
+    <p>Last modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>

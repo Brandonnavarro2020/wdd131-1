@@ -7,7 +7,83 @@
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/main.js"></script>
 </head>
+<body><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Madrid, Cundinamarca — Country Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Madrid, Cundinamarca</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Attractions</a></li>
+          <li><a href="#">Economy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero image of Madrid">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width:1200px)" type="image/webp">
+        <source srcset="images/hero-medium.webp" media="(min-width:640px)" type="image/webp">
+        <img src="images/hero-small.webp" alt="Panoramic view of Madrid, Cundinamarca" class="hero-img" width="1600" height="700">
+      </picture>
+      <div class="hero-caption container">
+        <h2>Welcome to Madrid</h2>
+        <p>A commuter town near Bogotá with a strong floriculture industry and growing urban life.</p>
+      </div>
+    </section>
+
+    <section class="content container grid" aria-label="Main content">
+      <article class="main-card" aria-labelledby="about-heading">
+        <h3 id="about-heading">About Madrid</h3>
+        <p><strong>Location and elevation:</strong> Madrid sits on the Bogotá savanna in Cundinamarca at about 2,554 meters above sea level.</p>
+        <p><strong>Population and growth:</strong> The municipality is part of the Bogotá metropolitan area and has experienced rapid growth in recent decades.</p>
+        <p><strong>History:</strong> Founded during the colonial period, Madrid developed as an agricultural and trading settlement and later expanded with metropolitan connectivity.</p>
+        <p><strong>Economy:</strong> Noted for floriculture (roses and flowers for export), logistics, light manufacturing and services serving Bogotá.</p>
+      </article>
+
+      <aside class="weather-card" aria-labelledby="weather-heading">
+        <h3 id="weather-heading" class="weather-heading">Weather</h3>
+        <div class="weather-body">
+          <div class="weather-mobile-icon">
+            <img src="images/weather-mobile.svg" alt="Weather icon" width="48" height="48">
+          </div>
+          <ul class="weather-data" aria-live="polite">
+            <li>Temperature: <span id="temp">8</span>°C</li>
+            <li>Wind Speed: <span id="wind">20</span> km/h</li>
+            <li>Wind Chill: <span id="windchill">N/A</span></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="facts container" aria-label="Quick facts">
+      <h3>Quick facts</h3>
+      <ul>
+        <li><strong>Distance to Bogotá:</strong> approximately 20–25 km west of Bogotá city center.</li>
+        <li><strong>Area:</strong> municipal area with urban and rural zones.</li>
+        <li><strong>Main industries:</strong> floriculture, logistics, manufacturing, and services.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; <span id="year"></span> Madrid, Cundinamarca</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="site-title">Madrid, Cundinamarca</h1>

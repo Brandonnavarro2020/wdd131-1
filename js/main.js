@@ -1,4 +1,4 @@
-// Static example values (adjust with live API if desired)
+// Static example values (adjust if you fetch live data)
 const temperature = 8; // °C
 const windSpeedKmh = 20; // km/h
 
